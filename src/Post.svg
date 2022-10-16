@@ -9,21 +9,21 @@
 
 <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan x="50" y="171.903">Nasdaq</tspan></text>
 <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="middle" x="50%" y="171.903">{{NASDAQ_PRICE}}</tspan></text>
-<text fill="#FF2D2D" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="171.903">{{NASDAQ_CHANGE}}</tspan></text>
+<text fill="#000" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="171.903">{{NASDAQ_CHANGE}}</tspan></text>
 
 <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan x="50" y="279.116">S&#38;P 500</tspan></text>
 <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="middle" x="50%" y="279.116">{{SPX_PRICE}}</tspan></text>
-<text fill="#FF2D2D" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="279.116">{{SPX_CHANGE}}</tspan></text>
+<text fill="#000" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="279.116">{{SPX_CHANGE}}</tspan></text>
 
 <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan x="50" y="386.33">Dow Jones</tspan></text>
 <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="middle" x="50%" y="386.33">{{DOW_PRICE}}</tspan></text>
-<text fill="#FF2D2D" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="386.33">{{DOW_CHANGE}}</tspan></text>
+<text fill="#000" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="386.33">{{DOW_CHANGE}}</tspan></text>
 
 <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan x="50" y="493.544">FTSE 100</tspan></text>
 <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="middle" x="50%" y="493.544">{{FTSE_PRICE}}</tspan></text>
-<text fill="#FF2D2D" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="493.544">{{FTSE_CHANGE}}</tspan></text>
+<text fill="#000" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="493.544">{{FTSE_CHANGE}}</tspan></text>
 
 <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan x="50" y="600.757">Hang Seng</tspan></text>
 <text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="middle" x="50%" y="600.757">{{HANG_PRICE}}</tspan></text>
-<text fill="#FF2D2D" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="600.757">{{HANG_CHANGE}}</tspan></text>
+<text fill="#000" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="600.757">{{HANG_CHANGE}}</tspan></text>
 </svg>
