@@ -1,0 +1,29 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700');
+  </style>
+<rect width="1200" height="675" fill="#1E1E1E"/>
+<rect width="1200" height="675" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 590.263L18 571.433C36 552.603 73 514.942 109 514.942C145 514.942 182 552.603 218 571.433C255 590.263 291 590.263 327 590.263C364 590.263 400 590.263 436 566.725C473 543.187 509 496.111 545 477.281C582 458.451 618 467.866 655 481.989C691 496.111 727 514.942 764 529.065C800 543.187 836 552.603 873 529.065C909 505.527 945 449.036 982 444.328C1018 439.62 1055 486.696 1091 514.942C1127 543.187 1164 552.603 1182 557.31L1200 562.018V675H1182C1164 675 1127 675 1091 675C1055 675 1018 675 982 675C945 675 909 675 873 675C836 675 800 675 764 675C727 675 691 675 655 675C618 675 582 675 545 675C509 675 473 675 436 675C400 675 364 675 327 675C291 675 255 675 218 675C182 675 145 675 109 675C73 675 36 675 18 675H0V590.263Z" fill="#0099FF" fill-opacity="0.2"/>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" font-weight="bold" letter-spacing="0em"><tspan x="50" y="83.83">{{DATA_TYPE}}: {{DATE}}</tspan></text>
+
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan x="50" y="171.903">Nasdaq</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="middle" x="50%" y="171.903">{{NASDAQ_PRICE}}</tspan></text>
+<text fill="#FF2D2D" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="171.903">{{NASDAQ_CHANGE}}</tspan></text>
+
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan x="50" y="279.116">S&#38;P 500</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="middle" x="50%" y="279.116">{{SPX_PRICE}}</tspan></text>
+<text fill="#FF2D2D" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="279.116">{{SPX_CHANGE}}</tspan></text>
+
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan x="50" y="386.33">Dow Jones</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="middle" x="50%" y="386.33">{{DOW_PRICE}}</tspan></text>
+<text fill="#FF2D2D" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="386.33">{{DOW_CHANGE}}</tspan></text>
+
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan x="50" y="493.544">FTSE 100</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="middle" x="50%" y="493.544">{{FTSE_PRICE}}</tspan></text>
+<text fill="#FF2D2D" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="493.544">{{FTSE_CHANGE}}</tspan></text>
+
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan x="50" y="600.757">Hang Seng</tspan></text>
+<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="middle" x="50%" y="600.757">{{HANG_PRICE}}</tspan></text>
+<text fill="#FF2D2D" xml:space="preserve" style="white-space: pre" font-family="Rubik" font-size="36" letter-spacing="0em"><tspan text-anchor="end" x="1150" y="600.757">{{HANG_CHANGE}}</tspan></text>
+</svg>

@@ -1,0 +1,14 @@
+{
+  "name": "TwitterBot",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Samy Rahmani",
+  "license": "MIT",
+  "dependencies": {
+    "convert-svg-to-png": "^0.6.4",
+    "cron": "^2.1.0",
+    "dayjs": "^1.11.5",
+    "dotenv": "^16.0.3",
+    "twitter-api-v2": "^1.12.8"
+  }
+}
