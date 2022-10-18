@@ -96,6 +96,6 @@ const tweetHourly = async () => {
   await tweet();
 };
 
-const job = new CronJob("*/60 * * * *", tweetHourly);
+const job = new CronJob("*/30 * * * *", tweetHourly);
 
 job.start();
