@@ -14,14 +14,15 @@ const FTSE_TICKER = "^FTSE";
 const HANG_TICKER = "^HSI";
 
 const GetData = async () => {
+  console.log("Getting Data");
   const NASDAQ_DATA = await getSymbolData(NASDAQ_TICKER);
   const SPX_DATA = await getSymbolData(SPX_TICKER);
   const DOW_DATA = await getSymbolData(DOW_TICKER);
   const FTSE_DATA = await getSymbolData(FTSE_TICKER);
   const HANG_DATA = await getSymbolData(HANG_TICKER);
 
-  const PriceFormator = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'USD', maximumFractionDigits: 0, signDisplay: 'exceptZero' });
-  const PercentFormator = new Intl.NumberFormat('en-EN', { style: 'percent', signDisplay: 'exceptZero' });
+  const PriceFormator = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'USD', maximumFractionDigits: 2, signDisplay: 'exceptZero' });
+  const PercentFormator = new Intl.NumberFormat('en-EN', { style: 'percent', maximumFractionDigits: 2,  signDisplay: 'exceptZero' });
 
   return {
     NASDAQ_PRICE: PriceFormator.format(NASDAQ_DATA.price),
@@ -45,11 +46,15 @@ const GetData = async () => {
 };
 
 const tweet = async () => {
+  console.log("Starting a tweet");
+
   const PostBuffer = fs.readFileSync("./src/Post.svg");
 
   let PostString = PostBuffer.toString();
 
   const Data = await GetData();
+
+  console.log("Applying Data to template");
 
   PostString = PostString.replace("{{DATE}}", Data.DATE);
   PostString = PostString.replace("{{DATA_TYPE}}", Data.DATA_TYPE);
@@ -69,28 +74,28 @@ const tweet = async () => {
   PostString = PostString.replace("{{HANG_PRICE}}", Data.HANG_PRICE);
   PostString = PostString.replace("{{HANG_CHANGE}}", Data.HANG_CHANGE);
 
-  console.log(PostString);
-
+  console.log("Converting Image to PNG")
   const image = await convert(Buffer.from(PostString));
 
   try {
+    console.log("Uploading");
     const media = await client.v1.uploadMedia(image, {
       mimeType: EUploadMimeType.Png,
     });
-    const newTweet = await client.v2.tweet("$HSI $SPX $QQQ $UKX $IXIC", {
+    await client.v2.tweet("$HSI $SPX $QQQ $UKX $IXIC", {
       media: { media_ids: [media] },
     });
-    console.log(newTweet);
+    console.log("Tweeted!");
   } catch (error) {
+    console.log("We couldn't send the tweet:")
     console.log(error);
   }
 };
 
 const tweetHourly = async () => {
   await tweet();
-  console.log("I have tweeted!");
 };
 
-const job = new CronJob("30 * * * *", tweetHourly);
+const job = new CronJob("*/60 * * * *", tweetHourly);
 
 job.start();
