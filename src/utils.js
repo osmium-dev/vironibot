@@ -1,16 +1,15 @@
+const getSymbolData = async (...symbols) => {
+  console.log(symbols);
+  const quotes_raw = await fetch(`https://query1.finance.yahoo.com/v7/finance/quote?symbols=${symbols.join(",")}`);
+  const quotes = await quotes_raw.json();
 
-const yahooFinance = require("yahoo-finance");
+  const result = quotes.quoteResponse.result.map((quote) => ({
+    price: quote.regularMarketPrice,
+    changePercent: quote.regularMarketChangePercent,
+    change: quote.regularMarketChange,
+  }));
 
-const getSymbolData = async (symbol) => {
-  const quote = await yahooFinance.quote({
-    symbol
-  });
-
-  return {
-    price: quote.price.regularMarketPrice,
-    changePercent: quote.price.regularMarketChangePercent,
-    change: quote.price.regularMarketChange,
-  };
+  return result;
 }
 
 module.exports = { getSymbolData }

@@ -4,7 +4,7 @@ const dayjs = require("dayjs");
 const fs = require("fs");
 const { convert } = require("convert-svg-to-png");
 const { EUploadMimeType } = require("twitter-api-v2");
-const { getSymbolData } = require("./utils");
+const { getSymbolData } = require("./utils.js");
 const CronJob = require("cron").CronJob;
 
 const NASDAQ_TICKER = "^IXIC";
@@ -15,11 +15,7 @@ const HANG_TICKER = "^HSI";
 
 const GetData = async () => {
   console.log("Getting Data");
-  const NASDAQ_DATA = await getSymbolData(NASDAQ_TICKER);
-  const SPX_DATA = await getSymbolData(SPX_TICKER);
-  const DOW_DATA = await getSymbolData(DOW_TICKER);
-  const FTSE_DATA = await getSymbolData(FTSE_TICKER);
-  const HANG_DATA = await getSymbolData(HANG_TICKER);
+  const [NASDAQ_DATA, SPX_DATA, DOW_DATA, FTSE_DATA, HANG_DATA] = await getSymbolData(NASDAQ_TICKER, SPX_TICKER, DOW_TICKER, FTSE_TICKER, HANG_TICKER);
 
   const PriceFormator = new Intl.NumberFormat('en-EN', { style: 'currency', currency: 'USD', maximumFractionDigits: 2, signDisplay: 'exceptZero' });
   const PercentFormator = new Intl.NumberFormat('en-EN', { style: 'percent', maximumFractionDigits: 2,  signDisplay: 'exceptZero' });
@@ -96,6 +92,6 @@ const tweetHourly = async () => {
   await tweet();
 };
 
-const job = new CronJob("*/30 * * * *", tweetHourly);
+const job = new CronJob("*/2 * * * *", tweetHourly);
 
 job.start();
